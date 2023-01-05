@@ -5,7 +5,6 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.0",
-        "symfony/http-foundation": "~4.0",
         "ext-json": "*"
     },
     "require-dev": {
