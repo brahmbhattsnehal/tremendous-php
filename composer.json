@@ -1,9 +1,9 @@
 {
-    "name": "hthabet/tremendous-php",
+    "name": "brahmbhattsnehal/tremendous-php",
     "description": "PHP SDK for Tremendous API",
     "type": "library",
     "require": {
-        "php": "^7.1",
+        "php": "^8.1",
         "guzzlehttp/guzzle": "^6.0",
         "symfony/http-foundation": "~4.0",
         "ext-json": "*"
