@@ -15,15 +15,21 @@ class Recipient
      */
     private $email;
 
-    public function __construct(string $name, string $email)
+    /**
+     * @var string
+     */
+    private $phone;
+
+    public function __construct(string $name, string $email, $phone)
     {
         $this->name = $name;
         $this->email = $email;
+        $this->phone= $phone;
     }
 
     public static function createFromArray(array $recipient): self
     {
-        return new self($recipient['name'], $recipient['email']);
+        return new self($recipient['name'], isset($recipient['email']) ? $recipient['email'] : "", isset($recipient['phone']) ? $recipient['phone'] : "");
     }
 
     /**
@@ -32,6 +38,14 @@ class Recipient
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone(): string
+    {
+        return $this->phone;
     }
 
     /**
